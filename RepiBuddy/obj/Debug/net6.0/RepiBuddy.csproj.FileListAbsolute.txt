@@ -30,3 +30,9 @@
 /Users/travisfahey/Dev/RepiBuddy/RepiBuddy/bin/Debug/net6.0/Microsoft.Extensions.DependencyInjection.dll
 /Users/travisfahey/Dev/RepiBuddy/RepiBuddy/bin/Debug/net6.0/System.Diagnostics.DiagnosticSource.dll
 /Users/travisfahey/Dev/RepiBuddy/RepiBuddy/obj/Debug/net6.0/RepiBuddy.csproj.CopyComplete
+/Users/travisfahey/Dev/RepiBuddy/RepiBuddy/obj/Debug/net6.0/RepiBuddy.sourcelink.json
+/Users/travisfahey/Dev/RepiBuddy/RepiBuddy/obj/Debug/net6.0/staticwebassets/msbuild.RepiBuddy.Microsoft.AspNetCore.StaticWebAssets.props
+/Users/travisfahey/Dev/RepiBuddy/RepiBuddy/obj/Debug/net6.0/staticwebassets/msbuild.build.RepiBuddy.props
+/Users/travisfahey/Dev/RepiBuddy/RepiBuddy/obj/Debug/net6.0/staticwebassets/msbuild.buildMultiTargeting.RepiBuddy.props
+/Users/travisfahey/Dev/RepiBuddy/RepiBuddy/obj/Debug/net6.0/staticwebassets/msbuild.buildTransitive.RepiBuddy.props
+/Users/travisfahey/Dev/RepiBuddy/RepiBuddy/obj/Debug/net6.0/staticwebassets.pack.json
