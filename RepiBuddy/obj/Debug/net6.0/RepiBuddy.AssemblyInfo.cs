@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RepiBuddy")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d01efe80fb56f6cab270eccf90a0287b1c0c84e8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+93c617852a2430b6a29b7ab4f5fb48c851feba2e")]
 [assembly: System.Reflection.AssemblyProductAttribute("RepiBuddy")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RepiBuddy")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
