@@ -16,3 +16,21 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.navbar-light {
+  background-color: #556B2F !important;
+}
+
+.navbar-brand, .nav-link {
+  color: #fff !important;
+}
+
+@media (max-width: 750px) {
+  .header-title {
+      width: 80% !important;
+  }
+
+  #header-text {
+      font-size: 36px !important;
+  }
+}

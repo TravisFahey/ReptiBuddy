@@ -1,8 +1,39 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
+<style>
+    .header-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative; /* This allows absolute positioning relative to this container */
+        width: 100%;
+        align-items: flex-end; /* Align children to the bottom */
+        height: 230px; /* Adjust height as necessary */
+        background-image: url('@Url.Action("GetImage", "Home", new { filename = "HeaderImage1.jpg" })');
+        background-size: cover;
+        background-position: center;
+        margin-top: 0px;
+        z-index: -1;
+    }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+    .header-title {
+        position: absolute; /* This will position the header text absolutely within the header-image container */
+        width: 30%;
+        text-align: center;
+        color: white; /* Adjust text color as needed */
+        background-color: #fa940e;
+        padding: 8px;
+    }
+
+    #header-text {
+        font-size: 52px;
+    }
+</style>
+@section HeaderImage {
+    <div class="header-image mb-3">
+        <div class="header-title align-baseline">
+            <h1 id="header-text">REPTIBUDDY</h1>
+        </div>
+    </div>
+}
