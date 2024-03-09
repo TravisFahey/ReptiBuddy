@@ -7,15 +7,20 @@ namespace RepiBuddy.Controllers;
 public class HomeController : Controller
 {
 	private readonly ILogger<HomeController> _logger;
-    private readonly IWebHostEnvironment _hostEnvironment;
+	private readonly IWebHostEnvironment _hostEnvironment;
 
-    public HomeController(ILogger<HomeController> logger, IWebHostEnvironment hostEnvironment)
+	public HomeController(ILogger<HomeController> logger, IWebHostEnvironment hostEnvironment)
 	{
 		_logger = logger;
 		_hostEnvironment = hostEnvironment;
 	}
 
 	public IActionResult Index()
+	{
+		return View();
+	}
+	
+	public IActionResult AddReptile() 
 	{
 		return View();
 	}
