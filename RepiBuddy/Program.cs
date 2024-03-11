@@ -1,12 +1,14 @@
 using Microsoft.EntityFrameworkCore;
 using RepiBuddy.Data;
+using RepiBuddy.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddScoped<ReptileService>();
 builder.Services.AddDbContext<ReptileDbContext>(options =>
-	options.UseSqlite(builder.Configuration.GetConnectionString("YourConnectionStringName")));
+	options.UseSqlite(builder.Configuration.GetConnectionString("ReptileConnectionString")));
 
 var app = builder.Build();
 

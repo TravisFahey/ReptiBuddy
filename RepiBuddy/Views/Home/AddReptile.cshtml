@@ -20,33 +20,43 @@
             <div class="card-header">Add Reptile</div>
             <div class="card-body">
                 <div class="row">
-                    <div class="form-group">
-                        <label>Photo:</label>
-                        <input type="file" class="form-control" Name="ReptilePhoto">
-                    </div>
-                    <div class="form-group">
-                        <label>Name:</label>
-                        <input type="text" class="form-control" Name="ReptileName">
-                    </div>
-                    <div class="form-group">
-                        <label>Date of Birth:</label>
-                        <input type="date" class="form-control" Name="DOB">
-                    </div>
-                    <div class="form-group">
-                        <label>Type:</label>
-                        <input class="form-select" Name="ReptileType">
-                    </div>
-                    <div class="form-group">
-                        <label>Species:</label>
-                        <select class="form-select" Name="ReptileSpecies"></select>
-                    </div>
-                    <div class="form-group">
-                        <label for="morph">Morph:</label>
-                        <select class="form-select" id="morph"></select>
-                    </div>
+                    <form asp-action="InsertReptile" asp-asp-controller="Home" method="post">
+                        <div class="form-group">
+                            <label>Photo:</label>
+                            <input type="file" class="form-control" Name="ReptilePhoto">
+                        </div>
+                        <div class="form-group">
+                            <label>Name:</label>
+                            <input type="text" class="form-control" Name="ReptileName">
+                        </div>
+                        <div class="form-group">
+                            <label>Date of Birth:</label>
+                            <input type="date" class="form-control" Name="DOB">
+                        </div>
+                        <div class="form-group">
+                            <label>Type:</label>
+                            <select class="form-select" id="typeDropdown" Name="ReptileType">
+                                <option value=''>Select a species...</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Species:</label>
+                            <select class="form-select" Name="ReptileSpecies">
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="morph">Morph:</label>
+                            <select class="form-select" id="morph"></select>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Add Reptile</button>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
 </div>
 
+@section scripts {
+    <script type="text/javascript" src="~/js/addreptile.js" asp-append-version="true"></script>
+    <script>var RootUrl = '@Url.Content("~/")';</script>
+}

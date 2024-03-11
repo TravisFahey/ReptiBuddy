@@ -1,6 +1,8 @@
 ﻿using System.Diagnostics;
+using System.Reflection.Metadata;
 using Microsoft.AspNetCore.Mvc;
 using RepiBuddy.Models;
+using RepiBuddy.Services;
 
 namespace RepiBuddy.Controllers;
 
@@ -8,11 +10,13 @@ public class HomeController : Controller
 {
 	private readonly ILogger<HomeController> _logger;
 	private readonly IWebHostEnvironment _hostEnvironment;
+	private readonly ReptileService _reptileService;
 
-	public HomeController(ILogger<HomeController> logger, IWebHostEnvironment hostEnvironment)
+	public HomeController(ILogger<HomeController> logger, IWebHostEnvironment hostEnvironment, ReptileService reptileService)
 	{
 		_logger = logger;
 		_hostEnvironment = hostEnvironment;
+		_reptileService = reptileService;
 	}
 
 	public IActionResult Index()
@@ -23,6 +27,19 @@ public class HomeController : Controller
 	public IActionResult AddReptile() 
 	{
 		return View();
+	}
+	
+	public IActionResult InsertReptile([FromForm] InsertReptileModel model)
+	{
+		return Ok();
+	}
+	
+	[HttpGet]
+	public async Task<JsonResult> GetReptileTypes() 
+	{
+		var types = await _reptileService.GetReptileTypes();
+		
+		return Json(types);
 	}
 	
 	public IActionResult GetImage(string filename)
