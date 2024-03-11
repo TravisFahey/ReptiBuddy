@@ -42,6 +42,14 @@ public class HomeController : Controller
 		return Json(types);
 	}
 	
+	[HttpGet]
+	public async Task<JsonResult> GetReptileSpecies(int typeId) 
+	{
+		var species = await _reptileService.GetReptileSpecies(typeId);
+		
+		return Json(species);
+	}
+	
 	public IActionResult GetImage(string filename)
 		{
 			var path = Path.Combine(_hostEnvironment.WebRootPath, "img", filename);

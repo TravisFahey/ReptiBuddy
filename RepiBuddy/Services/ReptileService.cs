@@ -25,4 +25,17 @@ public class ReptileService
 		
 		return types;
 	}
+	
+	public async Task<IEnumerable<ReptileSpeciesModel>> GetReptileSpecies(int typeId) 
+	{
+		var species = await _context.Reptile_Species
+			.Where(x => x.Type == typeId)
+			.Select(x => new ReptileSpeciesModel
+				{
+					id = x.Id,
+					Species = x.Species
+				}).ToListAsync();
+			
+		return species;
+	}
 }
