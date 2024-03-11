@@ -29,7 +29,7 @@ public class HomeController : Controller
 		return View();
 	}
 	
-	public IActionResult InsertReptile([FromForm] InsertReptileModel model)
+	public IActionResult InsertReptile([FromForm] InsertReptileParam model)
 	{
 		return Ok();
 	}
