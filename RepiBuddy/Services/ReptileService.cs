@@ -14,10 +14,10 @@ public class ReptileService
 		_context = context;
 	}
 	
-	public async Task<IEnumerable<ReptileTypeModel>> GetReptileTypes() 
+	public async Task<IEnumerable<ReptileType>> GetReptileTypes() 
 	{
 		var types = await _context.Reptile_Type
-			.Select(x => new ReptileTypeModel 
+			.Select(x => new ReptileType 
 			{
 				id = x.Id,
 				Type = x.Type
@@ -26,11 +26,11 @@ public class ReptileService
 		return types;
 	}
 	
-	public async Task<IEnumerable<ReptileSpeciesModel>> GetReptileSpecies(int typeId) 
+	public async Task<IEnumerable<ReptileSpecies>> GetReptileSpecies(int typeId) 
 	{
 		var species = await _context.Reptile_Species
 			.Where(x => x.Type == typeId)
-			.Select(x => new ReptileSpeciesModel
+			.Select(x => new ReptileSpecies
 				{
 					id = x.Id,
 					Species = x.Species
