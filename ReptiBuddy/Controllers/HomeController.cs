@@ -8,13 +8,11 @@ namespace ReptiBuddy.Controllers;
 
 public class HomeController : Controller
 {
-	private readonly ILogger<HomeController> _logger;
 	private readonly IWebHostEnvironment _hostEnvironment;
 	private readonly ReptileService _reptileService;
 
-	public HomeController(ILogger<HomeController> logger, IWebHostEnvironment hostEnvironment, ReptileService reptileService)
+	public HomeController(IWebHostEnvironment hostEnvironment, ReptileService reptileService)
 	{
-		_logger = logger;
 		_hostEnvironment = hostEnvironment;
 		_reptileService = reptileService;
 	}
