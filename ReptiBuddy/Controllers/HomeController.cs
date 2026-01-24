@@ -27,6 +27,7 @@ public class HomeController : Controller
 		return View();
 	}
 	
+	//insert endpoint
 	public IActionResult InsertReptile([FromForm] InsertReptileParam model)
 	{
 		return Ok();
